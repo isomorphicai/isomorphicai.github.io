@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 6V21C12 19 9 18 3 18V3C9 3 12 6 12 6Z' stroke='%230B2240'/><path d='M12 6V21C12 19 15 18 21 18V3C15 3 12 6 12 6Z' stroke='%23C5A059'/></svg>">
+    <title>isomorphic.in</title>
+    <!-- Google Fonts: Cormorant Garamond for editorial headings, Plus Jakarta Sans for UI/body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6V21C12 19 9 18 3 18V3C9 3 12 6 12 6Z" stroke="var(--color-primary)" />
+                    <path d="M12 6V21C12 19 15 18 21 18V3C15 3 12 6 12 6Z" stroke="var(--color-accent)" />
+                </svg>
+                <span>isomorphic<span class="dot-in">.in</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#comparison-section">Security & Compliance</a>
+                <a href="#why-marble">Philosophy</a>
+                <a href="#features-deep">University Features</a>
+                <a href="#dashboard-section">Client Dashboard</a>
+                <a href="#process">How it Works</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-secondary trigger-demo-modal">Book a Demo</button>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Admissions & student support on autopilot. Zero hallucinations.</h1>
+                    <p class="hero-subtitle">
+                        An isomorphic reflection of your institutional databases. We build secure, FERPA-compliant chatbots trained exclusively on your university guidelines, admissions FAQs, and catalog files.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary trigger-demo-modal">Request University Demo</button>
+                        <a href="#comparison-section" class="btn btn-outline">Security & Compliance Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Static Comparison and Security Section -->
+        <section id="comparison-section" class="comparison-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Academic Trust</span>
+                    <h2>A secure, verified fit vs. a public generic wrap</h2>
+                    <p>Higher education demands absolute accuracy and strict compliance. Here is how generic AI public wrappers compare to Isomorphic’s student-centric precision chatbot engine.</p>
+                </div>
+
+                <div class="comparison-table-wrapper">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Institutional Dimension</th>
+                                <th class="table-col-generic">Generic Public AI Bot</th>
+                                <th class="table-col-marble">Isomorphic University Bot</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="dim-title">Student Data Privacy (FERPA)</td>
+                                <td class="generic-val">
+                                    <span class="status-indicator error"></span>
+                                    High risk. Conversations and user metadata are transmitted to public servers, potentially violating FERPA mandates on student record protection.
+                                </td>
+                                <td class="marble-val">
+                                    <span class="status-indicator success"></span>
+                                    100% Compliant. We isolate student inquiries in secure, private containers. Conversations are encrypted and never fed into public models.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dim-title">Information Accuracy</td>
+                                <td class="generic-val">
+                                    <span class="status-indicator error"></span>
+                                    High rate of hallucinations. Falsifies critical details like enrollment deadlines, campus fees, or credit evaluation guidelines.
+                                </td>
+                                <td class="marble-val">
+                                    <span class="status-indicator success"></span>
+                                    Deterministic retrieval. The chatbot only references whitelisted syllabus, catalog databases, and financial aid manuals.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dim-title">Regulatory Standards</td>
+                                <td class="generic-val">
+                                    <span class="status-indicator error"></span>
+                                    Fails key accessibility (WCAG) guidelines and does not support student GDPR data-purging rights out of the box.
+                                </td>
+                                <td class="marble-val">
+                                    <span class="status-indicator success"></span>
+                                    Fully accessible. Built to comply with WCAG 2.1 AA standards. Provides automated tools for student data deletion and compliance audits.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dim-title">Campus Guardrails</td>
+                                <td class="generic-val">
+                                    <span class="status-indicator error"></span>
+                                    Uncontrolled parameters. Standard chatbots can be manipulated into talking about rival colleges or criticizing administrative policies.
+                                </td>
+                                <td class="marble-val">
+                                    <span class="status-indicator success"></span>
+                                    Institutional lock. Prevents competitor comparison, locks response parameters to campus policies, and maintains academic dignity.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="dim-title">Curriculum Updates</td>
+                                <td class="generic-val">
+                                    <span class="status-indicator error"></span>
+                                    Static parameters. Retraining models to match new academic year schedules requires expensive engineering cycles.
+                                </td>
+                                <td class="marble-val">
+                                    <span class="status-indicator success"></span>
+                                    Immediate updates. Administrators can manually program overrides and term schedule exceptions in a self-service sandbox.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agra Philosophy Section -->
+        <section id="why-marble" class="philosophy-section">
+            <div class="container">
+                <div class="philosophy-grid">
+                    <div class="philosophy-image">
+                        <!-- Custom beautiful SVG illustrating geometric precision of Taj Mahal marble carving / Pietra Dura -->
+                        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="400" fill="var(--color-bg-secondary)" rx="16"/>
+                            <!-- Geometric background grid -->
+                            <circle cx="200" cy="200" r="160" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 4"/>
+                            <circle cx="200" cy="200" r="100" stroke="var(--color-border)" stroke-width="1"/>
+                            <line x1="200" y1="40" x2="200" y2="360" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 4"/>
+                            <line x1="40" y1="200" x2="360" y2="200" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 4"/>
+                            
+                            <!-- Marble Mosaic Pattern (Pietra Dura style) -->
+                            <path d="M200 100 L230 170 L300 200 L230 230 L200 300 L170 230 L100 200 L170 170 Z" fill="none" stroke="var(--color-accent)" stroke-width="2"/>
+                            <path d="M200 150 L215 185 L250 200 L215 215 L200 250 L185 215 L150 200 L185 185 Z" fill="var(--color-primary-light)" opacity="0.3"/>
+                            <circle cx="200" cy="200" r="15" fill="var(--color-accent)"/>
+                            <circle cx="200" cy="200" r="8" fill="var(--color-bg)"/>
+                            
+                            <!-- Ornamentation details -->
+                            <path d="M200 40 C200 80 180 100 200 100 C220 100 200 80 200 40 Z" fill="var(--color-accent)"/>
+                            <path d="M200 360 C200 320 220 300 200 300 C180 300 200 320 200 360 Z" fill="var(--color-accent)"/>
+                            <path d="M40 200 C80 200 100 220 100 200 C100 180 80 200 40 200 Z" fill="var(--color-accent)"/>
+                            <path d="M360 200 C320 200 300 180 300 200 C300 220 320 200 360 200 Z" fill="var(--color-accent)"/>
+                        </svg>
+                    </div>
+                    <div class="philosophy-content">
+                        <span class="eyebrow">The Concept of Symmetry</span>
+                        <h2>Identical in structure. Mirroring your truth.</h2>
+                        <p>
+                            In mathematics and computer science, an **isomorphism** represents a structure-preserving mapping between two systems. They are identical in form, shape, and value. We bring that exact concept of perfect structural symmetry to higher education AI systems.
+                        </p>
+                        <p>
+                            Agra's heritage is defined by perfect geometric symmetry—where the left side of a monument is a mathematically identical, isomorphic mirror of the right. Your campus chatbot should behave no differently: it is a 1-to-1, identical mapping of your official university database. It speaks only your whitelisted terms, outlines only your official schedules, and honors your student policies exactly.
+                        </p>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">FERPA Safe</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Zero</span>
+                                <span class="stat-label">Guideline Hallucinations</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">94%</span>
+                                <span class="stat-label">Student Self-Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Capabilities & Features Section (University Focus) -->
+        <section id="features-deep" class="features-deep-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Campus Architecture</span>
+                    <h2>Engineered for modern student services</h2>
+                    <p>Provide a seamless student journey from initial enrollment inquiry to graduation logistics with tailored modules.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card-item">
+                        <div class="feature-icon">📁</div>
+                        <h3>Self-Service Admission Sandbox</h3>
+                        <p>Directly update deadlines, tuition fees, and admission criteria in real-time. Make instant corrections during active enrollment terms.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Catalogue Auto-Syncing</h3>
+                        <p>Automatically syncs with your official university website folders, course registration logs, and academic calendars every week.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Multi-Turn Support Memory</h3>
+                        <p>Answers complicated inquiries. Remembers the department choice when a student asks, "What are hostel fee rates for it?"</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Global Applicant Support</h3>
+                        <p>Fluent in Hindi, Spanish, Mandarin, and 80+ other languages. Detects the language of international applicants and replies in tone.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="feature-icon">🧑‍💻</div>
+                        <h3>Registrar Escalation Protocol</h3>
+                        <p>Smoothly routes high-priority questions (like credit evaluations or financial aid audits) directly to corresponding administration desks.</p>
+                    </div>
+                    <div class="feature-card-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>FERPA & PII Filters</h3>
+                        <p>Integrated filters erase student identifiers, card info, and private grades before conversations are archived in the registry logs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Dashboard Preview Section -->
+        <section id="dashboard-section" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Administrative Portal</span>
+                    <h2>A console that puts your registrar in control</h2>
+                    <p>Audit deflection rates, manage official syllabus links, customize Q&A rules, or review student chat logs.</p>
+                </div>
+
+                <div class="dashboard-preview-container">
+                    <!-- Sidebar -->
+                    <div class="db-sidebar">
+                        <div class="db-logo">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6V21C12 19 9 18 3 18V3C9 3 12 6 12 6Z" stroke="var(--color-primary)" />
+                                <path d="M12 6V21C12 19 15 18 21 18V3C15 3 12 6 12 6Z" stroke="var(--color-accent)" />
+                            </svg>
+                            <span>isomorphic<span class="dot-in">.in</span></span>
+                        </div>
+                        <ul class="db-nav">
+                            <li class="active" data-tab="analytics">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 3v18h18"/>
+                                    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                                </svg>
+                                Overview
+                            </li>
+                            <li data-tab="sources">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                                </svg>
+                                Knowledge Sources
+                            </li>
+                            <li data-tab="self-train">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                                </svg>
+                                Self-Training UI
+                            </li>
+                            <li data-tab="conversations">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                                Inquiry Logs
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Main Dashboard Content -->
+                    <div class="db-main">
+                        <!-- Tab Content: Analytics -->
+                        <div id="tab-analytics" class="tab-content active">
+                            <div class="db-header">
+                                <div>
+                                    <h3>Student Service Analytics</h3>
+                                    <p class="subtitle">Real-time chat deflection for the current semester</p>
+                                </div>
+                                <span class="badge active-badge">Campus Instance Active</span>
+                            </div>
+
+                            <!-- Key Metrics Cards -->
+                            <div class="metrics-grid">
+                                <div class="metric-card">
+                                    <span class="card-label">Total Student Chats</span>
+                                    <div class="card-value">4,892</div>
+                                    <span class="card-trend upward">+18.2% during admissions</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="card-label">Admissions Deflection</span>
+                                    <div class="card-value">88.5%</div>
+                                    <span class="card-trend upward">+3.4% this term</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="card-label">Avg. Helpdesk Relief</span>
+                                    <div class="card-value">142h</div>
+                                    <span class="card-trend upward">Saved this month</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="card-label">Resolution Rate</span>
+                                    <div class="card-value">94.8%</div>
+                                    <span class="card-trend upward">Fully resolved</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="card-label">Student CSAT</span>
+                                    <div class="card-value">4.82/5.0</div>
+                                    <span class="card-trend upward">95% positive feedback</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="card-label">Active Users</span>
+                                    <div class="card-value">1,240</div>
+                                    <span class="card-trend neutral">Normal load</span>
+                                </div>
+                            </div>
+
+                            <!-- Two Columns: Chart + Top Queries / Status -->
+                            <div class="db-widgets-split">
+                                <!-- Chart -->
+                                <div class="chart-container-box">
+                                    <div class="chart-header">
+                                        <h4>Weekly Enrollment Deflection</h4>
+                                        <div class="chart-legend">
+                                            <span class="legend-item"><span class="legend-color green"></span>Isomorphic Bot</span>
+                                            <span class="legend-item"><span class="legend-color gray"></span>Standard Public AI</span>
+                                        </div>
+                                    </div>
+                                    <div class="visual-chart">
+                                        <svg viewBox="0 0 600 200" class="svg-chart">
+                                            <line x1="0" y1="40" x2="600" y2="40" stroke="var(--color-bg-secondary)" stroke-width="1"/>
+                                            <line x1="0" y1="90" x2="600" y2="90" stroke="var(--color-bg-secondary)" stroke-width="1"/>
+                                            <line x1="0" y1="140" x2="600" y2="140" stroke="var(--color-bg-secondary)" stroke-width="1"/>
+                                            
+                                            <path d="M 0 130 Q 150 140 300 135 T 600 138" fill="none" stroke="#D1D5DB" stroke-width="2" stroke-dasharray="4 4"/>
+                                            <path d="M 0 80 Q 100 60 200 45 T 400 35 T 600 25" fill="none" stroke="var(--color-primary)" stroke-width="3"/>
+                                            <circle cx="200" cy="45" r="5" fill="var(--color-accent)" class="chart-dot" data-val="88% deflection during Enrollment Week"/>
+                                            <circle cx="400" cy="35" r="5" fill="var(--color-accent)" class="chart-dot" data-val="92% deflection on Financial Deadline"/>
+                                            <circle cx="580" cy="26" r="5" fill="var(--color-accent)" class="chart-dot" data-val="95% deflection on Admissions Day"/>
+                                        </svg>
+                                        <div class="chart-tooltip" id="chart-tooltip">Hover over dots for details</div>
+                                        <div class="chart-x-labels">
+                                            <span>Mon</span>
+                                            <span>Tue</span>
+                                            <span>Wed</span>
+                                            <span>Thu</span>
+                                            <span>Fri</span>
+                                            <span>Sat</span>
+                                            <span>Sun</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Top Query Topics & Alerts Widget -->
+                                <div class="info-widget-box">
+                                    <h4>Frequent Student Queries</h4>
+                                    <ul class="query-list-widget">
+                                        <li>
+                                            <span class="q-text">"When is the fall application deadline?"</span>
+                                            <span class="q-hits">942 hits (98% deflected)</span>
+                                        </li>
+                                        <li>
+                                            <span class="q-text">"What are the hostel room fees?"</span>
+                                            <span class="q-hits">589 hits (92% deflected)</span>
+                                        </li>
+                                        <li>
+                                            <span class="q-text">"How do I submit scholarship forms?"</span>
+                                            <span class="q-hits">410 hits (85% deflected)</span>
+                                        </li>
+                                        <li>
+                                            <span class="q-text">"Contact info for admissions registrar?"</span>
+                                            <span class="q-hits">211 hits (100% deflected)</span>
+                                        </li>
+                                    </ul>
+                                    <div class="alert-box-widget">
+                                        <span class="alert-icon">⚠️</span>
+                                        <div class="alert-info">
+                                            <strong>Admissions Log Alert</strong>
+                                            <p>18 queries regarding "International credit transfers" fell back. Click Self-Training UI to add override rules.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Sources -->
+                        <div id="tab-sources" class="tab-content">
+                            <div class="db-header">
+                                <div>
+                                    <h3>Academic Knowledge Sources</h3>
+                                    <p class="subtitle">Configure crawler scopes. Select exactly what database documents the chatbot reads.</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm" id="btn-add-source">+ Add Document</button>
+                            </div>
+
+                            <div class="sources-list" id="sources-list">
+                                <div class="source-item">
+                                    <div class="source-info">
+                                        <div class="source-icon web-icon"></div>
+                                        <div>
+                                            <span class="source-title">University Website (Admissions & FAQ Directory)</span>
+                                            <span class="source-url">https://university.edu/admissions</span>
+                                        </div>
+                                    </div>
+                                    <div class="source-meta">
+                                        <span class="source-status active">142 pages indexed</span>
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="source-toggle">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="source-item">
+                                    <div class="source-info">
+                                        <div class="source-icon doc-icon"></div>
+                                        <div>
+                                            <span class="source-title">Student Handbook 2026-27 (Policies & Housing rules)</span>
+                                            <span class="source-url">Student_Handbook_v12.pdf</span>
+                                        </div>
+                                    </div>
+                                    <div class="source-meta">
+                                        <span class="source-status active">56 pages indexed</span>
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="source-toggle">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="source-item">
+                                    <div class="source-info">
+                                        <div class="source-icon doc-icon"></div>
+                                        <div>
+                                            <span class="source-title">Tuition, Scholarships, & Fees Schedule</span>
+                                            <span class="source-url">Tuition_Schedule_2026.pdf</span>
+                                        </div>
+                                    </div>
+                                    <div class="source-meta">
+                                        <span class="source-status active">12 pages indexed</span>
+                                        <label class="switch">
+                                            <input type="checkbox" checked class="source-toggle">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="source-item disabled-source">
+                                    <div class="source-info">
+                                        <div class="source-icon web-icon"></div>
+                                        <div>
+                                            <span class="source-title">Internal Faculty Grading Wiki (Restricted Area)</span>
+                                            <span class="source-url">https://faculty-portal.university.edu/grades</span>
+                                        </div>
+                                    </div>
+                                    <div class="source-meta">
+                                        <span class="source-status inactive">Excluded</span>
+                                        <label class="switch">
+                                            <input type="checkbox" class="source-toggle">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Self-Training Console -->
+                        <div id="tab-self-train" class="tab-content">
+                            <div class="db-header">
+                                <div>
+                                    <h3>Self-Training Studio</h3>
+                                    <p class="subtitle">Directly program overrides for unique campus scenarios. Inject questions and write their precise answers below to override the bot's standard knowledge base.</p>
+                                </div>
+                                <span class="badge active-badge">Sandbox Sync On</span>
+                            </div>
+
+                            <div class="training-container-grid">
+                                <div class="training-form-box">
+                                    <h4>Inject Q&A Override Rule</h4>
+                                    <form id="qa-override-form">
+                                        <div class="form-group">
+                                            <label for="override-q">If student asks a question like:</label>
+                                            <input type="text" id="override-q" placeholder="e.g. Do you have a hostel room discount?" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="override-a">The chatbot must answer exactly:</label>
+                                            <textarea id="override-a" rows="3" placeholder="e.g. Scholarship recipients with GPA above 3.8 qualify for 50% discount on housing boarding fees." required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-sm btn-full">Inject Rules & Sync Bot</button>
+                                    </form>
+                                </div>
+
+                                <div class="active-rules-box">
+                                    <h4>Active Manual Overrides</h4>
+                                    <div class="rules-table-container">
+                                        <table class="rules-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Trigger Query</th>
+                                                    <th>Assigned Response</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="rules-tbody">
+                                                <tr>
+                                                    <td><code>fall admission</code></td>
+                                                    <td>"Fall 2026 applications close on Nov 30th. Decisions are emailed in mid-January."</td>
+                                                    <td><button class="delete-rule-btn">&times;</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>hostel fees</code></td>
+                                                    <td>"Hostel charges are ₹65,000 per semester, including dining plans."</td>
+                                                    <td><button class="delete-rule-btn">&times;</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Conversations -->
+                        <div id="tab-conversations" class="tab-content">
+                            <div class="db-header">
+                                <div>
+                                    <h3>Student Inquiry Logs</h3>
+                                    <p class="subtitle">Review student conversations and re-train responses with a single click.</p>
+                                </div>
+                            </div>
+
+                            <div class="log-container">
+                                <div class="log-nav">
+                                    <div class="log-nav-item active">All Inquiries (12)</div>
+                                    <div class="log-nav-item">Flagged (1)</div>
+                                    <div class="log-nav-item">Unresolved (0)</div>
+                                </div>
+                                <div class="log-list">
+                                    <div class="log-item">
+                                        <div class="log-item-header">
+                                            <span class="log-user">Student ID: #9841</span>
+                                            <span class="log-time">5 mins ago</span>
+                                        </div>
+                                        <div class="log-message user-msg"><strong>Student:</strong> "Do you offer scholarship options for international students?"</div>
+                                        <div class="log-message bot-msg"><strong>Bot:</strong> "Yes! Merit-based scholarships covering up to 40% tuition are available. The application deadline is February 15th." <span class="citation">source: Tuition_Scholarships.pdf</span></div>
+                                        <div class="log-actions">
+                                            <button class="btn-text green-text">✓ Approved</button>
+                                            <button class="btn-text grey-text">✏ Edit Training Data</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="log-item flagged">
+                                        <div class="log-item-header">
+                                            <span class="log-user">Student ID: #9822</span>
+                                            <span class="log-time">1 hour ago</span>
+                                            <span class="flag-badge">Needs Registrar Review</span>
+                                        </div>
+                                        <div class="log-message user-msg"><strong>Student:</strong> "Can I submit IELTS score copy for English waiver?"</div>
+                                        <div class="log-message bot-msg"><strong>Bot:</strong> "I'm sorry, I cannot find English proficiency waiver details in the standard Admissions FAQ."</div>
+                                        <div class="log-actions">
+                                            <button class="btn-text green-text">✓ Mark Approved</button>
+                                            <button class="btn-text gold-text highlight">✏ Teach Bot: "Yes, submit IELTS score to registrar"</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline: Simple 3-step Process -->
+        <section id="process" class="process-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">The Deployment</span>
+                    <h2>Sculpting your bot, in three steps</h2>
+                    <p>How we bring unmatched clarity, alignment, and security control to your university's digital helpline.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-num">01</div>
+                        <h3>Link Knowledge Sources</h3>
+                        <p>Index your official college catalog, tuition fee schedules, student manuals, or admissions websites securely.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">02</div>
+                        <h3>Chisel Rules & Compliance</h3>
+                        <p>Configure custom prompt guidelines. Turn on PII filters, compliance boundaries, and tone constraints.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">03</div>
+                        <h3>Deploy Widget</h3>
+                        <p>Embed with one script onto admissions portals, student portals, and library directories. Track analytics in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to build a chatbot that actually knows your curriculum?</h2>
+                    <p>Let's design, train, and test a custom instance using your university catalog. FERPA-safe, zero generic drift.</p>
+                    <button class="btn btn-primary btn-large trigger-demo-modal">Book a University Demo</button>
+                    <p class="cta-sub">Based in Agra, serving educational institutions globally.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 6V21C12 19 9 18 3 18V3C9 3 12 6 12 6Z" stroke="var(--color-primary-light)" />
+                            <path d="M12 6V21C12 19 15 18 21 18V3C15 3 12 6 12 6Z" stroke="var(--color-accent)" />
+                        </svg>
+                        <span>isomorphic<span class="dot-in">.in</span></span>
+                    </div>
+                    <p>Precision AI systems, handcrafted for exact data alignments in higher education.</p>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Institutional</h4>
+                    <a href="#comparison-section">Security & Compliance</a>
+                    <a href="#why-marble">Philosophy</a>
+                    <a href="#dashboard-section">Dashboard Portal</a>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Contact & Info</h4>
+                    <span class="location">Agra, Uttar Pradesh, India</span>
+                    <a href="mailto:hello@isomorphic.in?subject=University%20Inquiry" class="footer-email">hello@isomorphic.in</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Isomorphic. All rights reserved. Precision-engineered in Agra.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book a Demo Modal Dialog (University Theme) -->
+    <div class="modal-overlay" id="demo-modal">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="modal-header">
+                <h2>Request a University Demo</h2>
+                <p>Provide your institution website, and we'll construct a custom admissions/student preview bot for your team.</p>
+            </div>
+            <form id="demo-form" class="modal-form">
+                <div class="form-group">
+                    <label for="client-name">Your Name & Title</label>
+                    <input type="text" id="client-name" name="name" placeholder="Dr. Jane Smith, Dean of Admissions" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-email">Institutional Email</label>
+                    <input type="email" id="client-email" name="email" placeholder="jsmith@university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-website">College / University Website</label>
+                    <input type="url" id="client-website" name="website" placeholder="https://www.university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-notes">Primary Focus (e.g. Admissions, Housing FAQs, Financial Aid)</label>
+                    <textarea id="client-notes" name="notes" placeholder="e.g. Please crawl our tuition page and admissions syllabus, and skip internal directories..." rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-full">Generate Request & Open Email</button>
+                </div>
+            </form>
+            <!-- Success Screen -->
+            <div class="modal-success-screen" id="modal-success">
+                <div class="success-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h3>Request Generated!</h3>
+                <p>We are opening your email client to send your demo details to our team in Agra.</p>
+                <p class="small-hint">If your email client didn't open automatically, you can send your website link to: <br><strong>hello@isomorphic.in</strong></p>
+                <button class="btn btn-secondary btn-full close-success-modal">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
