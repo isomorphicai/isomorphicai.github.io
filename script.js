@@ -238,8 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const website = document.getElementById('client-website').value;
             const notes = document.getElementById('client-notes').value;
 
-            const targetEmail = 'hello@isomorphic.in';
-            const subject = encodeURIComponent(`Bespoke University Chatbot Demo: ${new URL(website).hostname}`);
+            const targetEmail = 'isomorphicofficial@gmail.com';
+            let siteHost = website;
+            try {
+                const formattedUrl = website.startsWith('http://') || website.startsWith('https://') ? website : `https://${website}`;
+                siteHost = new URL(formattedUrl).hostname || website;
+            } catch (err) {
+                siteHost = website;
+            }
+            const subject = encodeURIComponent(`Bespoke University Chatbot Demo: ${siteHost}`);
             
             const body = encodeURIComponent(
                 `Hello Isomorphic,\n\n` +
