@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (demoForm) {
-        demoForm.addEventListener('submit', (e) => {
+        demoForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const name = document.getElementById('client-name').value;
@@ -238,7 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const website = document.getElementById('client-website').value;
             const notes = document.getElementById('client-notes').value;
 
-            const targetEmail = 'isomorphicofficial@gmail.com';
+            const submitBtn = demoForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.textContent : 'Submit Demo Request';
+
             let siteHost = website;
             try {
                 const formattedUrl = website.startsWith('http://') || website.startsWith('https://') ? website : `https://${website}`;
@@ -246,29 +248,45 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (err) {
                 siteHost = website;
             }
-            const subject = encodeURIComponent(`Bespoke University Chatbot Demo: ${siteHost}`);
-            
-            const body = encodeURIComponent(
-                `Hello Isomorphic,\n\n` +
-                `I would like to request a chiseled chatbot demo for our institution.\n\n` +
-                `--- Institution Details ---\n` +
-                `Name & Title: ${name}\n` +
-                `Institutional Email: ${email}\n` +
-                `University Website: ${website}\n\n` +
-                `--- Target Knowledge Focus Areas ---\n` +
-                `${notes || 'Train on admissions portals and student guidelines.'}\n\n` +
-                `Best regards,\n` +
-                `${name}`
-            );
 
-            const mailtoUrl = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting Request...';
+            }
 
-            demoForm.style.display = 'none';
-            modalSuccess.style.display = 'flex';
+            try {
+                const response = await fetch("https://formsubmit.co/ajax/isomorphicofficial@gmail.com", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        _subject: `Bespoke University Chatbot Demo: ${siteHost}`,
+                        _captcha: "false",
+                        "Name & Title": name,
+                        "Institutional Email": email,
+                        "University Website": website,
+                        "Target Knowledge / Focus Areas": notes || 'Train on admissions portals and student guidelines.'
+                    })
+                });
 
-            setTimeout(() => {
-                window.location.href = mailtoUrl;
-            }, 800);
+                if (response.ok) {
+                    demoForm.reset();
+                    demoForm.style.display = 'none';
+                    modalSuccess.style.display = 'flex';
+                } else {
+                    throw new Error('Failed to send request');
+                }
+            } catch (error) {
+                console.error("Demo request error:", error);
+                alert("There was an issue sending your demo request. Please try again or email us directly at isomorphicofficial@gmail.com.");
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                }
+            }
         });
     }
 });
