@@ -213,15 +213,18 @@ section {
     color: var(--color-accent);
 }
 
-.logo-icon-wrap {
-    width: 30px;
-    height: 30px;
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
+.site-logo-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
     border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.footer-left .site-logo-icon {
+    width: 22px;
+    height: 22px;
 }
 
 .nav-links {
